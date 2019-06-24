@@ -1,0 +1,508 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:none;
+}
+a{ 
+	text-decoration: none; 
+}
+body {
+	background: url("../data/pattern/p.png") repeat;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+#hap-wrapper{
+	position: relative;
+	top:150px;
+	margin: 0 auto;
+	max-width:450px;
+	-moz-box-shadow: 1px 1px 3px #333;
+	-webkit-box-shadow: 1px 1px 3px #333;
+    box-shadow: 1px 1px 3px #333;
+	background: rgb(69,72,77); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+.hap-player-holder{
+	position:relative;
+	overflow: hidden;
+}
+.hap-player-left{
+	width:160px;
+	float:left;
+}
+.hap-player-right{
+	position: relative;
+	margin-left: 160px;
+}
+.hap-player-thumb{
+	position:relative;
+	margin:10px;
+	width:145px!important;
+	height:125px!important;
+	overflow:hidden;
+}
+.hap-player-thumb img{
+	display: block;
+	height: 100%;
+	width:auto!important;
+	margin: 0 auto;
+}
+.hap-icon-color{
+	color:#666 !important;
+	-webkit-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out; 
+}
+.hap-icon-rollover-color{
+	color:#bbb !important;
+	-webkit-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out; 
+}
+.hap-contr-btn{
+	border:1px solid #fff;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+	-moz-box-shadow: 1px 1px 3px #444;
+	-webkit-box-shadow: 1px 1px 3px #444;
+    box-shadow: 1px 1px 3px #444;
+}
+.hap-contr-btn-i{
+	position: absolute;
+    top: 0;
+    left: 0;
+	width:30px;
+	height:30px;
+	text-align: center;
+	display: inline-block;
+	font-size: 15px!important;
+	line-height: 30px!important;
+}
+.hap-contr-btn-i2{
+	position: absolute;
+    top: 0;
+    left: 0;
+	width:25px;
+	height:25px;
+	text-align: center;
+	display: inline-block;
+	font-size: 15px!important;
+	line-height: 25px!important;
+}
+.hap-info{
+	display:inline-block;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+.hap-player-title{
+	font-size:14px;
+	text-align: center;
+	margin:0;
+	margin-bottom: 3px;
+	padding:0;
+	color:#fff;
+	font-family: Arial, sans-serif;
+    font-size: 13px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+}
+.hap-player-artist{
+	font-size:12px;
+	color:#fff;
+	font-family: Arial, sans-serif;
+    font-size: 11px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+    font-style: italic;
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+.hap-controls{
+	position: relative;
+	height:40px;
+	margin-left:10px;
+	margin-top:15px;
+}
+.hap-prev-toggle{
+	position:absolute;
+	top:5px;
+	left:0px;
+	width:30px;
+	height:30px;
+	-moz-border-radius:30px;
+    -webkit-border-radius:30px;
+    border-radius:30px;
+	border:2px;
+}
+.hap-playback-toggle{
+	position:absolute;
+	top:0px;
+	left:35px;
+	width:40px;
+	height:40px;
+	-moz-border-radius:40px;
+    -webkit-border-radius:40px;
+    border-radius:40px;
+	border:2px;
+}
+.hap-playback-toggle i{
+	width:40px;
+	height:40px;
+	text-align: center;
+	display: inline-block;
+	font-size: 20px!important;
+	line-height: 40px!important;
+}
+.hap-next-toggle{
+	position:absolute;
+	top:5px;
+	left:80px;
+	width:30px;
+	height:30px;
+	-moz-border-radius:30px;
+    -webkit-border-radius:30px;
+    border-radius:30px;
+	border:2px;
+}
+
+.hap-volume-wrapper{
+	position:absolute;
+	top:7px;
+	right:55px;
+	width:25px;
+	height:25px;
+}
+.hap-volume-wrapper:hover .hap-volume-seekbar{
+	display: block;
+}
+.hap-player-volume{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:25px;
+	height:25px;
+	-moz-border-radius:25px;
+    -webkit-border-radius:25px;
+    border-radius:25px;
+}
+.hap-volume-seekbar{
+	position:absolute;
+	top:-77px;
+	left:0px;
+	width:28px;
+	height:80px;
+	overflow:hidden;
+	cursor: pointer;
+	touch-action: none;
+	display: none;
+	background: rgba(200, 54, 54, 0.01); 
+}
+.hap-volume-bg{
+	position:absolute;
+	bottom:10px;
+	left:8px;
+	width:8px;
+	height:60px;
+	background:#333;
+	border:1px solid #777;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px; 
+}
+.hap-volume-level{
+	position:absolute;
+	bottom:11px;
+	left:9px;
+	width:8px;
+	height:40px;
+	background:#fff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.hap-random-toggle{
+	position:absolute;
+	top:7px;
+	right:20px;
+	width:25px;
+	height:25px;
+	-moz-border-radius:25px;
+    -webkit-border-radius:25px;
+    border-radius:25px;
+}
+
+.hap-seekbar-inner{
+	position:relative;
+	margin-top:10px;
+	margin-left:10px;
+	margin-right:20px;
+	height:12px;
+	cursor: pointer;
+	touch-action: none;
+	-moz-box-shadow: 1px 1px 6px #333;
+	-webkit-box-shadow: 1px 1px 6px #333;
+	box-shadow: 1px 1px 6px #333;
+}
+.hap-progress-bg{
+	position:relative;
+	background:#222;
+	width:100%;
+	top:5px;
+	height:8px;
+	-webkit-box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+	-moz-box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+	box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.hap-load-level{
+	position:absolute;
+	background:#444;
+	top:5px;
+	height:8px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.hap-progress-level{
+	position:absolute;
+	background:#fff;
+	top:5px;
+	height:8px;	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+
+
+#hap-playlist-list{
+	display:none;
+}
+.hap-playlist-holder{
+	position:relative;
+	top:0px;
+	width:100%;
+	overflow:hidden;
+}
+.hap-playlist-inner{
+	margin: 10px;
+	min-height:100px;
+	max-height:150px;
+}
+.hap-playlist-item{
+	position:relative;
+	top:0px;
+	left:0px;
+	width:100%;
+	line-height: 25px;
+	overflow:hidden;
+}
+.hap-playlist-item > a {
+    border: 0;
+}
+.hap-playlist-item:last-child {  
+	margin-bottom:0px!important;
+}
+.hap-playlist-non-selected {
+	color:#999;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+    text-decoration: none; 
+}
+.hap-playlist-selected {
+	color:#ffffff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+    text-decoration: none; 
+}
+.hap-playlist-title {
+	font-size:14px;
+	color:inherit;
+}
+.hap-download, .hap-link{
+	float:right;
+	color:#fff!important;
+	font-size: 13px!important;
+	width: 30px;
+	text-align: center;
+}
+.hap-download i, .hap-link i{
+	line-height:25px;
+	color:inherit;
+}
+.hap-download:hover, .hap-link:hover{
+	color:#bbb!important;
+}
+
+
+.hap-playlist-filter-msg{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	line-height:110px;
+	display: none;
+}
+.hap-playlist-filter-msg p{
+	font-size:15px!important;
+	color:#fff!important;
+	vertical-align: middle!important;
+    text-align:center!important;
+	padding:0!important; 	
+	margin:0!important; 
+	line-height: inherit!important;
+}
+.hap-bottom-bar{
+	position:relative;
+	top:0px;
+	clear:both;
+	height:30px;
+	width:100%;
+	overflow:hidden;
+	border-top:1px solid #222;
+}
+.hap-search-filter{
+	position:relative;
+	width:125px!important;
+	height:18px!important;
+	top:50%;
+	margin:-9px 0 0 20px!important;
+	padding:0!important;
+	border:0!important;
+	-moz-border-radius:0 !important;
+    -webkit-border-radius:0 !important;
+	border-radius:0 !important;
+	background:#222 !important;
+	color:#fff !important;
+	box-shadow:none!important; 
+	line-height:1!important; 
+	float: left;
+	outline:none;
+}
+
+.hap-sr-bar-i{
+	display: inline-block;
+	font-size: 15px!important;
+	line-height: 30px!important;
+}
+.hap-sort-alpha{
+	position:relative;
+	left:5px;
+	top:0px;
+	width:25px;
+	height:100%;
+	text-align: center;
+	float: left;
+}
+.hap-share-item{
+	position:relative;
+	top:0px;
+	right:10px;
+	width:25px;
+	height:100%;
+	margin-right:5px;
+	text-align: center;
+	float: right;
+}
+
+
+
+
+.hap-tooltip{
+	position:absolute;
+	background:#333;
+	text-align:center;
+	z-index:10000;
+	pointer-events:none;
+	border:1px solid #666;
+	color:#fff!important;
+	display:none;
+}
+.hap-tooltip p {
+	width:inherit;
+	font-size:12px!important;
+	margin:0 5px !important;
+	padding:0 !important;
+	line-height:20px !important;
+	white-space:nowrap;
+	color:inherit;
+}
+.hap-tooltip-num{
+	direction: ltr !important;
+}
+
+.hap-preloader{
+	position:absolute;
+	width:36px;
+	height:30px;
+	top:50%;
+	left:50%;
+	margin-left:-16px;
+	margin-top:-15px;
+	background: #111 url('../data/loading.gif') no-repeat center center; 
+}
+
+
+/* flash or yt */
+.hap-sound-holder{
+	position:absolute;
+	width:100px;
+	height:100px;
+}
+.hap-force-hidden{
+	position:absolute!important;
+	top:0px;
+	left:-10000px!important;
+	width:320px;
+	height:240px;
+}
+[dir=rtl] .hap-force-hidden {
+    right:-10000px!important;
+}
+.hap-youtube-holder{
+	left:0px!important;
+}
+/* flash or yt */
+
+.hap-hidden {
+	opacity: 0; 
+	filter: alpha(opacity=0); 
+}
+.hap-visible {
+	opacity: 1;
+	-webkit-transition: opacity 500ms ease-out;
+	-moz-transition: opacity 500ms ease-out;
+	transition: opacity 500ms ease-out;
+}
+
+
+/* scroll */
+.hap-playlist-inner .mCSB_inside > .mCSB_container {
+    margin-right: 30px;
+}
+
+
+
+
+@media only screen and (max-width: 400px) {
+	.hap-player-left{
+		display: none;
+	}
+	.hap-player-right{
+		margin-left: 0;
+	}
+}
+
+/*javascript media queires
+.hap-player-left-mq{
+	display: none;
+}
+.hap-player-right-mq{
+	margin-left: 0;
+}*/

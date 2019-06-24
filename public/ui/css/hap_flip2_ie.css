@@ -1,0 +1,4 @@
+
+.hap-player-wrapper.flip .hap-playlist-holder {
+	backface-visibility: visible;
+}

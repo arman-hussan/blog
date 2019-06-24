@@ -1,0 +1,564 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:none;
+}
+a{ 
+	text-decoration: none; 
+}
+body {
+	background: #ff5510;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+#hap-wrapper{
+	position: relative;
+	top:50px;
+	min-width:320px;
+	max-width:380px;
+	margin: 0 auto;
+	-moz-box-shadow: 1px 1px 3px #333;
+	-webkit-box-shadow: 1px 1px 3px #333;
+    box-shadow: 1px 1px 20px #555;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.hap-wrapper-inner{
+	position: relative;
+	overflow: hidden;
+
+}
+.hap-player-holder{
+	position:relative;
+	width:100%;
+	background: #fff;
+}
+.hap-player-thumb-wrapper{
+	position:relative;
+	height:300px;
+	overflow:hidden;
+	touch-action: none;
+}
+.hap-player-thumb{
+	position:relative;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.hap-player-thumb img{
+	display:block;
+	width:100%;
+	height:auto!important;
+	min-height: 300px;
+	margin:0 auto;
+}
+.hap-icon-color{
+	color:#666 !important;
+	-webkit-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out; 
+}
+.hap-icon-rollover-color{
+	color:#ff5510 !important;
+	-webkit-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out; 
+}
+.hap-contr-btn{
+	
+}
+.hap-contr-btn-i{
+	position: absolute;
+    top: 0;
+    left: 0;
+	width:30px;
+	height:30px;
+	text-align: center;
+	display: inline-block;
+	font-size: 18px!important;
+	line-height: 30px!important;
+}
+.hap-player-bottom{
+	padding-bottom:10px;
+}
+.hap-info{
+	position: relative;
+	margin-top:20px;
+	margin-left:30px;
+}
+.hap-player-title{
+	font-size:18px;
+	margin: 0;
+	margin-bottom: 3px;
+	padding:0;
+	color:#000;
+}
+.hap-player-artist{
+	font-size:14px;
+	color:#000;
+	margin: 0;
+	padding:0;
+}
+
+
+.hap-seekbar-inner{
+	position:relative;
+	margin:20px 30px 0 30px;
+	height:15px;
+	cursor: pointer;
+	touch-action: none;
+}
+.hap-progress-bg{
+	position:relative;
+	background:#ccc;
+	width:100%;
+	top:5px;
+	height:5px;
+}
+.hap-load-level{
+	position:absolute;
+	background:#ddd;
+	top:5px;
+	height:5px;
+}
+.hap-progress-level{
+	position:absolute;
+	background:#ff5510;
+	top:5px;
+	height:5px;	
+	-webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+}
+
+.hap-media-time-current{
+	position:relative;
+	top:-3px;
+	left:28px;
+	line-height:20px !important;
+	text-align: center;
+	float:left;
+	margin:0!important;
+	padding: 0px 0px 0px 2px!important;
+	color:#333 !important;
+	font-size:11px!important;
+	pointer-events:none;
+	margin-bottom: 20px;
+	width:auto;
+}
+.hap-media-time-total{
+	position:relative;
+	top:-3px;
+	right:30px;
+	line-height:20px !important;
+	text-align: center;
+	float:right;
+	margin:0!important;
+	padding: 0px 0px 0px 2px!important;
+	color:#333 !important;
+	font-size:11px!important;
+	pointer-events:none;
+	margin-bottom: 20px;
+	width:auto;
+}
+
+
+
+.hap-player-controls{
+	position: relative;
+	width:100%;
+	height:50px;
+	margin-top:20px;
+}
+.hap-random-toggle{
+	position:relative;
+	top:10px;
+	margin-left:25px;
+	width:25px;
+	height:25px;
+	float:left;
+}
+.hap-loop-toggle{
+	position:absolute;
+	top:10px;
+	right:29px;
+	width:25px;
+	height:25px;
+}
+.hap-player-controls-inner{
+	width:130px;
+	height: 50px;
+	margin: 0 auto;
+}
+.hap-prev-toggle{
+	position:relative;
+	top:10px;
+	left:0px;
+	width:30px;
+	height:30px;
+	-moz-border-radius:30px;
+    -webkit-border-radius:30px;
+    border-radius:30px;
+	border:2px;
+	float:left;
+}
+.hap-playback-toggle{
+	position:relative;
+	top:0px;
+	margin-left:10px;
+	width:50px;
+	height:50px;
+	-moz-border-radius:50px;
+    -webkit-border-radius:50px;
+    border-radius:50px;
+	border:2px;
+	float:left;
+}
+.hap-playback-toggle i{
+	width:50px;
+	height:50px;
+	text-align: center;
+	display: inline-block;
+	font-size: 26px!important;
+	line-height: 50px!important;
+}
+.hap-next-toggle{
+	position:relative;
+	top:10px;
+	right:0px;
+	width:30px;
+	height:30px;
+	-moz-border-radius:30px;
+    -webkit-border-radius:30px;
+    border-radius:30px;
+	border:2px;
+	float:right;
+}
+
+
+.hap-playlist-toggle{
+	position:absolute;
+	top:15px;
+	right:22px;
+	width:30px;
+	height:30px;
+}
+.hap-playlist-toggle i{
+	width:30px;
+	height:30px;
+	text-align: center;
+	display: inline-block;
+	line-height: 30px!important;
+	color:#fff!important;
+	text-shadow: 2px 2px 5px #111;
+}
+
+
+.hap-volume-wrapper{
+	position:absolute;
+	bottom:15px;
+	right:22px;
+	width:30px;
+	height:30px;
+}
+.hap-volume-wrapper:hover .hap-volume-seekbar{
+	display: block;
+}
+.hap-player-volume{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:30px;
+	height:30px;
+}
+.hap-player-volume i{
+	width:30px;
+	height:30px;
+	text-align: center;
+	display: inline-block;
+	line-height: 30px!important;
+	color:#fff!important;
+	text-shadow: 2px 2px 5px #111;
+	font-size: 18px!important;
+}
+.hap-volume-seekbar{
+	position:absolute;
+	top:-80px;
+	left:0px;
+	width:30px;
+	height:80px;
+	overflow:hidden;
+	cursor: pointer;
+	touch-action: none;
+	background:#fff;
+	display: none;
+}
+.hap-volume-bg{
+	position:absolute;
+	bottom:10px;
+	left:12px;
+	width:6px;
+	height:60px;
+	background:#ddd;
+}
+.hap-volume-level{
+	position:absolute;
+	bottom:10px;
+	left:12px;
+	width:6px;
+	height:40px;
+	background:#ff5510;
+	-webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+}
+
+
+
+.hap-share-toggle{
+	position: absolute;
+	top:15px;
+	left:22px;
+	width:30px;
+	height:30px;
+}
+.hap-share-toggle:hover .hap-share-holder{
+	display: block;
+}
+.hap-share-toggle-btn{
+	position: relative;
+	width:30px;
+	height:30px;
+}
+.hap-share-holder{
+	position: absolute;
+	top:30px;
+	left:0;
+	height:160px;
+	width: 30px;
+	display: none;
+	background: rgba(0,0,0,0.01);
+}
+.hap-share-item{
+	position: relative;
+	width:30px;
+	height:30px;
+	float: right;
+	margin-top: 8px;
+}
+.hap-share-toggle i,
+.hap-share-item i{
+	color: #fff!important;
+	text-shadow: 2px 2px 5px #111;
+}
+
+
+.hap-global-action{
+	position: absolute;
+	top:15px;
+	left:70px;
+	height:30px;
+}
+.hap-global-download-toggle,
+.hap-global-link-toggle{
+	position: relative;
+	top:0;
+	left:0;
+	width:30px;
+	height:30px;
+	float: left;
+	margin-right: 18px;
+	display: none;
+	border: 0;
+}
+.hap-global-download-toggle i,
+.hap-global-link-toggle i{
+	color: #fff!important;
+	text-shadow: 2px 2px 5px #111;
+}
+.hap-global-link-toggle i{
+	position: absolute;
+	top:1px;
+}
+
+
+
+
+
+
+#hap-playlist-list{
+	display:none;
+}
+.hap-playlist-holder{
+	position: absolute;
+	left:0;
+	top:-315px;
+	width:100%;
+	height: 100%;
+	background: #fff;
+	overflow:hidden;
+	height: 315px;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box; 
+}
+.hap-playlist-inner{
+	margin:20px;
+	height: 275px;
+}
+.hap-playlist-item{
+	position: relative;
+	top:0px;
+	left:0px;
+	overflow: hidden;
+	height: 70px;
+	margin-bottom:5px;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box; 
+}
+.hap-playlist-item > a {
+    border: 0;
+}
+.hap-playlist-item:last-child {  
+	margin-bottom:none;
+}
+.hap-playlist-selected {
+	float:left;
+	color:#fff;
+	width: 100%;
+	text-decoration: none; 
+	background: #ff5510!important;
+}
+.hap-playlist-non-selected {
+	float:left;
+	color:#7B7676;
+	width: 100%;
+	text-decoration: none; 
+}
+.hap-playlist-thumb{
+	position:relative;
+	top:0px;
+	left:0px;
+	width:100px;
+	height:70px;
+	float:left;
+	overflow:hidden;
+}
+.hap-playlist-thumb img{
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:block;
+	width:100%;
+	height:100%;
+}
+.hap-playlist-title{
+	position: absolute;
+	padding:0 10px;
+	font-size: 15px;
+	color:inherit;
+	top: 50%;
+	-webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+.hap-download, .hap-link{
+	float:right;
+	color:#7B7676!important;
+	font-size: 13px!important;
+	width: 30px;
+	line-height: 70px;
+	text-align: center;
+}
+.hap-download i, .hap-link i{
+	line-height:30px;
+	color:inherit;
+}
+
+
+
+
+
+.hap-tooltip{
+	position:absolute;
+	background:#ff5510;
+	color:#fff!important;
+	text-align:center;
+	z-index:10000;
+	pointer-events:none;
+	-moz-box-shadow: 1px 1px 3px #ccc;
+	-webkit-box-shadow: 1px 1px 3px #ccc;
+	box-shadow: 1px 1px 3px #999;
+	display:none;
+}
+.hap-tooltip p {
+	width:inherit;
+	font-size:12px!important;
+	margin:0 5px !important;
+	padding:0 !important;
+	line-height:20px !important;
+	white-space:nowrap;
+	color:inherit;
+}
+.hap-tooltip-num{
+	direction: ltr !important;
+}
+
+.hap-preloader{
+	position:absolute;
+	width:36px;
+	height:30px;
+	top:50%;
+	left:50%;
+	margin-left:-16px;
+	margin-top:-15px;
+	background: #111 url('../data/loading.gif') no-repeat center center; 
+}
+
+
+/* flash or yt */
+.hap-sound-holder{
+	position:absolute;
+	width:100px;
+	height:100px;
+}
+.hap-force-hidden{
+	position:absolute!important;
+	top:0px;
+	left:-10000px!important;
+	width:320px;
+	height:240px;
+}
+[dir=rtl] .hap-force-hidden {
+    right:-10000px!important;
+}
+.hap-youtube-holder{
+	left:0px!important;
+}
+/* flash or yt */
+
+
+/* scroll */
+.hap-playlist-inner .mCSB_inside > .mCSB_container {
+    margin-right: 30px;
+}
+
+
+.hap-hidden {
+	opacity: 0; 
+	filter: alpha(opacity=0); 
+}
+.hap-visible {
+	opacity: 1;
+	-webkit-transition: opacity 500ms ease-out;
+	-moz-transition: opacity 500ms ease-out;
+	transition: opacity 500ms ease-out;
+}
+
+
+
+
